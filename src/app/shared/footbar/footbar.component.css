@@ -1,0 +1,32 @@
+
+nav {
+    font-size: 10px;
+}
+
+.l {
+    color: #ffffff;
+}
+
+.lista,
+.redes {
+    margin: 0;
+    padding: 0;
+}
+
+.lista li {
+    display: inline;
+    text-align: center;
+    margin: 0 10px 0 0;
+}
+
+.redes li {
+    display: inline;
+    float: right;
+    margin: 0 20px 0 0;
+    font-size: 20px
+}
+
+.derechos {
+    margin: 0 auto;
+    color: #ffffff;
+}
