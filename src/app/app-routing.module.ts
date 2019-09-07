@@ -6,6 +6,7 @@ import { CotizadorComponent } from './conponents/cotizador/cotizador.component';
 import { RegistroComponent } from './conponents/registro/registro.component';
 import { ContratoComponent } from './conponents/contrato/contrato.component';
 import { LoginComponent } from './conponents/login/login.component';
+import { PerfilComponent } from './conponents/perfil/perfil.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'contratacion', component: ContratoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: '', redirectTo: 'cotizador', pathMatch: 'full' },
   { path: '**', component: CotizadorComponent }
 ];

@@ -1,0 +1,24 @@
+.card {
+    width: 60%;
+    height: 55%;
+    margin: 10rem 0 15rem 15rem;
+}
+
+.card-body input {
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    border: 1px solid #85929E;
+    border-radius: 5px;
+    text-indent: 10px;
+    margin: 15px auto;
+}
+
+.card-body .inputId{
+    margin: auto 10px;
+}
+
+h3 {
+    color: #5D6D7E;
+    margin: auto 0;
+}

@@ -1,1 +1,11 @@
-<p>registro works!</p>
+<div class="card mt-3">
+    <div class="card-body inputId">
+        <h3>Registro de Polizas</h3>
+        <form [formGroup]="idPoliza" (submit)="postIdPoliza()">
+            <div class="col-12">
+                <input type="text" formControlName="poliza" placeholder="Id de la Poliza">
+            </div>
+            <button type="submit" class="btn btn-outline-success btn-block">Regístrar</button>
+        </form>
+    </div>
+</div>

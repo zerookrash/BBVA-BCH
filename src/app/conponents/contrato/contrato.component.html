@@ -1,1 +1,67 @@
-<p>contrato works!</p>
+<h2>Registro de Nuevos Clientes</h2>
+
+<div class="card mt-3 mb-3">
+    <div class="card-body">
+        <h3>Registro</h3>
+        <form [formGroup]="regForm" (submit)="envio()">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="name" placeholder="Nombre(s)">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="last" placeholder="Apellidos">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="rfc" placeholder="RFC">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="curp" placeholder="CURP">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="ine" placeholder="INE / IFE">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="licencia" placeholder="Liciencia">
+                </div>
+            </div>
+            <hr>
+            <h3>Datos Bancarios.</h3>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="ctaBancaria" placeholder="Cuenta Bancaria">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="noTarjeta" placeholder="No. Tarjeta">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="fechaVencimiento" placeholder="Fecha de Vencimiento">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="cvv" placeholder="CVV">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <input type="email" formControlName="mail" placeholder="Correo Eléctronico">
+                </div>
+            </div>
+            <hr>
+            <h3>Beneficiario</h3>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="nameBeneficiary" placeholder="Nombre del Beneficiario">
+                </div>
+                <div class="col-12 col-md-6">
+                    <input type="text" formControlName="ctaBeneficiatry" placeholder="Cuenta del Beneficiario">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-success btn-block">Enviar</button>
+        </form>
+    </div>
+</div>
