@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { BusquedasService } from '../../services/busquedas.service';
 
 
 @Component({
@@ -9,14 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor( private route: ActivatedRoute ) { }
+  constructor( private busquedaSvc: BusquedasService) {}
 
   ngOnInit() {
-    this.route.params
-      .subscribe( param => {
-        console.log(param['termino']);
-        // this.productoService.buscarProducto( param['termino'] );
-      });
+  }
+
+  search(value){
+    console.log(value);
+    let data = this.busquedaSvc.getData(value);
+    console.log(data);
   }
 
 }

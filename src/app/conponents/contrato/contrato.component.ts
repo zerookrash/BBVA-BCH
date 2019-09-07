@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
+// Sweet Alert
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-contrato',
   templateUrl: './contrato.component.html',
   styleUrls: ['./contrato.component.css']
 })
 export class ContratoComponent implements OnInit {
+
+  titularAlerta = '';
 
   regForm = new FormGroup({
     name: new FormControl(''),
@@ -30,6 +35,7 @@ export class ContratoComponent implements OnInit {
       this.regForm.reset();
     } else {
       console.log(this.regForm.value);
+      Swal.fire(`Contrato Exítoso ${this.regForm.value.name} ${this.regForm.value.last}`, this.titularAlerta, 'success');
       this.regForm.reset();
     }
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+// Sweet Alert
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cotizador',
@@ -18,6 +20,7 @@ export class CotizadorComponent implements OnInit {
 
   valorCotiza = 0;
   primaBase = 50000;
+  titularAlerta = '';
 
   calculo() {
     // tslint:disable-next-line: no-unused-expression
@@ -50,6 +53,7 @@ export class CotizadorComponent implements OnInit {
     } else if ( marca === 'Nissan' && tipo === '4 Puertas' && clausula === 'Tipo B') {
       this.valorCotiza = this.primaBase + (this.primaBase * .15);
     }
+    Swal.fire(`Tu cotización es de $ ${this.valorCotiza}.00`, this.titularAlerta, 'success');
   }
 
 

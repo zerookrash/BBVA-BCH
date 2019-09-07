@@ -1,11 +1,32 @@
-<div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+<div class="card">
+    <div class="card-body">
 
-        <a *ngFor="let producto of productoService.productosFiltrado" [routerLink]="['/item',producto.cod] " class="animated fadeIn rk-item ae-masonry__item">
-            <img src="assets/productos/{{producto.url}}.jpg" alt="">
-            <div [routerLink]="['/item',producto.cod] " class="item-meta">
-                <h2> {{ producto.titulo }} </h2>
-                <p> {{ producto.categoria }} </p>
+        <div class="input-group container mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" [(ngModel)]="binding" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="search(binding)"><i class="fas fa-search"></i></button>
             </div>
-        </a>
-    
+        </div>
+
     </div>
+    <div class="card-body">
+            <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>  
+    </div>
+</div>
