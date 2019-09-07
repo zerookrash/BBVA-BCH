@@ -1,0 +1,44 @@
+hr {
+    border-radius: 1px solid #000000;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body form {
+    border: 1px solid #D0D3D4;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card-body input,
+select {
+    height: 60px;
+    align-items: center;
+    border: 1px solid #85929E;
+    border-radius: 5px;
+    text-indent: 10px;
+    margin: 10px 6px;
+}
+
+.card-body .total {
+     border: 1px solid #D0D3D4;
+     font-size: 20px;
+}
+
+.card-body hr {
+    border: 1px solid #D0D3D4;
+}
+
+.card-body h5 {
+    color: #5D6D7E
+}
+
+.card-body p {
+    margin: auto 10px;
+}
+
+.card-body .check {
+    margin: 0 auto;
+}

@@ -1,1 +1,45 @@
-<p>cotizador works!</p>
+<div class="card mb-3">
+    <img src="../../../assets/cotizador/cotizador.png" class="card-img-top" alt="...">
+    <hr>
+    <div class="card-body">
+       <form [formGroup]="cotizaForm">
+
+           <div class="row">
+               <div class="col-12">
+                    <!-- <input type="text" formControlName="anio" placeholder="Año del Automovil"> -->
+                    <!-- <input type="text" formControlName="marca" placeholder="Marca del Automovil"> -->
+                    <h3>Solo Automoviles del año <strong>2019</strong></h3>
+                    <div class="input-group mb-3">
+                            <select class="custom-select" formControlName="marca">
+                                <option selected>Marca del Automovil</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Nissan">Nissan</option>
+                            </select>
+                        </div>
+                    <div class="input-group mb-3">
+                        <select class="custom-select" formControlName="tipo">
+                            <option selected>Tipo de Automovil</option>
+                            <option value="2 Puertas">2 Puertas</option>
+                            <option value="4 Puertas">4 Puertas</option>
+                        </select>
+                    </div>
+                   
+                    <h5>Grupo de Clausulas</h5>
+                    <hr>
+                    <div class="input-group mb-3">
+                        <select class="custom-select" formControlName="clausulas" (change)="calculo()">
+                            <option selected>Clausulas de Limite de Velocidad</option>
+                            <option value="Tipo A">El seguro solo cubre los daños al respetar el limite de velocidad</option>
+                            <option value="Tipo B">El seguro cubre los daños aun no se respete el limite de velosidad</option>
+                        </select>
+                    </div>
+                    <div class="total">
+                        <h3>{{valorCotiza | currency}}</h3>
+                    </div>
+                </div>
+            </div>
+
+       </form>
+    </div>
+</div>
